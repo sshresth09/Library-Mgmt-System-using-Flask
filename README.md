@@ -25,28 +25,30 @@ python app.py
 Flask: Lightweight, flexible, and well-suited for building small to medium-sized web applications. It allows easy routing and rendering of templates.
 
 ### 2. Database Integration
-SQLAlchemy: Used as the Object-Relational Mapper (ORM) to interact with the MySQL database. It simplifies database operations and improves code maintainability.
+<ul>
+<li>SQLAlchemy: Used as the Object-Relational Mapper (ORM) to interact with the MySQL database. It simplifies database operations and improves code maintainability.
 
-MySQL: Chosen for its reliability, scalability, and wide community support.
+<li>MySQL: Chosen for its reliability, scalability, and wide community support.
+</ul>
 
 ### 3. Database Tables
-students: Tracks student information like name, department, contact, gender, and registration date.
+<li>students: Tracks student information like name, department, contact, gender, and registration date.
 
-books: Manages the library's inventory of books with title, edition, and author details.
+<li>books: Manages the library's inventory of books with title, edition, and author details.
 
-borrow: Stores records of borrowed books, including the student's name, book title, token number, and due date.
+<li>borrow: Stores records of borrowed books, including the student's name, book title, token number, and due date.
 
-b_return: Keeps records of returned books, including the student’s name, book title, token number, and charges (if any).
+<li>b_return: Keeps records of returned books, including the student’s name, book title, token number, and charges (if any).
 
 ### 4. Routing
 Routes are designed to follow REST principles:
 
-/: Homepage displaying all borrowed books.
+<li>/: Homepage displaying all borrowed books.
 
-/insert: Handles adding new students.
+<li>/insert: Handles adding new students.
 
-/book: Handles adding new books to the inventory.
+<li>/book: Handles adding new books to the inventory.
 
-/borrow_book: Facilitates borrowing of books by students.
+<li>/borrow_book: Facilitates borrowing of books by students.
 
-/return_book: Facilitates returning books and recording charges.
+<li>/return_book: Facilitates returning books and recording charges.
