@@ -20,4 +20,33 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:root@localhost:330
 python app.py
 ```
 
+## Design
+### 1. Framework
+Flask: Lightweight, flexible, and well-suited for building small to medium-sized web applications. It allows easy routing and rendering of templates.
 
+### 2. Database Integration
+SQLAlchemy: Used as the Object-Relational Mapper (ORM) to interact with the MySQL database. It simplifies database operations and improves code maintainability.
+
+MySQL: Chosen for its reliability, scalability, and wide community support.
+
+### 3. Database Tables
+students: Tracks student information like name, department, contact, gender, and registration date.
+
+books: Manages the library's inventory of books with title, edition, and author details.
+
+borrow: Stores records of borrowed books, including the student's name, book title, token number, and due date.
+
+b_return: Keeps records of returned books, including the student’s name, book title, token number, and charges (if any).
+
+### 4. Routing
+Routes are designed to follow REST principles:
+
+/: Homepage displaying all borrowed books.
+
+/insert: Handles adding new students.
+
+/book: Handles adding new books to the inventory.
+
+/borrow_book: Facilitates borrowing of books by students.
+
+/return_book: Facilitates returning books and recording charges.
